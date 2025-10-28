@@ -154,7 +154,7 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 64px;
+   font-size: clamp(2rem, 5vw, 4rem);
   line-height: 0.98;
   margin: 0 0 18px;
   font-weight: 800;
@@ -594,25 +594,28 @@ body {
 /* 📱 Responsive                                                            */
 /* -------------------------------------------------------------------------- */
 /* ====== MOBILE RESPONSIVE FIXES ====== */
-@media (max-width: 768px) {
+
   /* Navbar */
-  .nav {
-    display: flex;
+  @media (max-width: 768px) {
+  .site-header-inner {
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(90deg, #0a66d1, #00b4e6);
-    padding: 1rem 0;
-    position: relative;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
   }
 
   .nav a {
-    display: block;
-    padding: 0.75rem 0;
-    color: #fff;
-    text-align: center;
-    width: 100%;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
+}
+
 
   .header-cta {
     background: #ffb200;
@@ -643,6 +646,32 @@ body {
     flex-direction: column;
     gap: 10px;
   }
+  
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-art-card {
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+
 
   /* Cards / Services */
   .card-grid {
@@ -665,7 +694,7 @@ body {
   .contact-form textarea {
     width: 100%;
   }
-}
+
 
 /* Smaller screens (phones under 480px) */
 @media (max-width: 480px) {
@@ -678,3 +707,36 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .services-grid,
+  .projects-grid,
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .site-header-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav a {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .services-grid,
+  .projects-grid,
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
