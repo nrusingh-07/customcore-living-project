@@ -593,7 +593,7 @@ body {
 /* -------------------------------------------------------------------------- */
 /* 📱 Responsive                                                            */
 /* -------------------------------------------------------------------------- */
-@media (max-width: 1100px) {
+@media (max-width: 768px) {
   .hero-inner {
     grid-template-columns: 1fr 420px;
   }
@@ -609,7 +609,7 @@ body {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 480px) {
   .hero-inner {
     grid-template-columns: 1fr;
     gap: 22px;
