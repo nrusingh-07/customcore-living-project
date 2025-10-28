@@ -593,56 +593,88 @@ body {
 /* -------------------------------------------------------------------------- */
 /* 📱 Responsive                                                            */
 /* -------------------------------------------------------------------------- */
+/* ====== MOBILE RESPONSIVE FIXES ====== */
 @media (max-width: 768px) {
-  .hero-inner {
-    grid-template-columns: 1fr 420px;
-  }
-
-  .services-grid,
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .about-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 22px;
-    padding: 0 18px;
-  }
-
-  .hero-content h1 {
-    font-size: 36px;
-  }
-
-  .nav a.header-cta {
-    display: none;
-  }
-
-  .nav-toggle {
-    display: inline-block;
-  }
-
+  /* Navbar */
   .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(90deg, #0a66d1, #00b4e6);
+    padding: 1rem 0;
+    position: relative;
+  }
+
+  .nav a {
+    display: block;
+    padding: 0.75rem 0;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .header-cta {
+    background: #ffb200;
+    color: #000;
+    font-weight: 600;
+    border-radius: 6px;
+    margin-top: 8px;
+  }
+
+  /* Hero Section */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero .buttons {
+    flex-direction: column;
     gap: 10px;
   }
 
-  .services-grid,
-  .projects-grid,
-  .portfolio-grid {
+  /* Cards / Services */
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Contact / Support Section */
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
-  .logo {
-    height: 40px;
+  .form-panel, .support-panel {
+    width: 100%;
+    box-shadow: none;
+    margin-bottom: 1.5rem;
   }
 
-  .site-header-inner {
-    padding: 12px 18px;
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
   }
 }
+
+/* Smaller screens (phones under 480px) */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
