@@ -1,17 +1,23 @@
 const express = require("express");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
+const path = require("path");
 require("dotenv").config();
 
 const app = express();
 
-// ✅ Serve all static files from the root folder
-app.use(express.static(__dirname));
+// ✅ Serve static files (HTML, CSS, JS, images) from the current directory
+app.use(express.static(path.join(__dirname)));
 
 app.use(cors());
 app.use(express.json());
 
+// ✅ Default route to serve index.html
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
 
+// ✅ Email sending endpoint
 app.post("/send", async (req, res) => {
   const { name, email, message } = req.body;
 
@@ -27,9 +33,9 @@ app.post("/send", async (req, res) => {
     });
 
     const mailOptions = {
-      from: process.env.EMAIL_USER, // ✅ use your Gmail as sender
+      from: process.env.EMAIL_USER,
       replyTo: email,
-      to: process.env.EMAIL_USER, // send to yourself
+      to: process.env.EMAIL_USER,
       subject: `New Inquiry from ${name}`,
       text: `
         Name: ${name}
@@ -40,7 +46,6 @@ app.post("/send", async (req, res) => {
 
     const info = await transporter.sendMail(mailOptions);
     console.log("✅ Email sent:", info.response);
-
     res.json({ success: true });
   } catch (error) {
     console.error("❌ Error sending mail:", error);
@@ -48,13 +53,10 @@ app.post("/send", async (req, res) => {
   }
 });
 
-// app.listen(5001, () => console.log("✅ Server running on port 5001"));
-// ✅ For Vercel: export the app instead of starting a local server
+// ✅ Run locally only (not on Vercel)
 if (process.env.NODE_ENV !== "production") {
-  // Run locally on your machine
   app.listen(5001, () => console.log("✅ Server running on port 5001"));
 }
 
-// Vercel needs the app exported (no app.listen)
+// ✅ Export app for Vercel
 module.exports = app;
-
