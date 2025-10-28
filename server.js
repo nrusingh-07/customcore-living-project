@@ -4,9 +4,13 @@ const nodemailer = require("nodemailer");
 require("dotenv").config();
 
 const app = express();
-app.use(express.static("public"));
+
+// ✅ Serve all static files from the root folder
+app.use(express.static(__dirname));
+
 app.use(cors());
 app.use(express.json());
+
 
 app.post("/send", async (req, res) => {
   const { name, email, message } = req.body;
