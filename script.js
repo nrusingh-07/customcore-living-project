@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     statusEl.style.color = "#555";
 
     try {
-      const res = await fetch("https://customcore-living-project.onrender.com/send", {
+      const res = await fetch("https://customcore-living-project-1.onrender.com/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
