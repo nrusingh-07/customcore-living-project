@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Initialize Resend with your API key
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.post("/send", async (req, res) => {
@@ -17,8 +17,8 @@ app.post("/send", async (req, res) => {
 
   try {
     const response = await resend.emails.send({
-      from: "CustomCore <onboarding@resend.dev>", // ✅ default sender
-      to: "bigdogring@gmail.com", // ⚠️ put YOUR real email here
+      from: "CustomCore <onboarding@resend.dev>", 
+      to: "bigdogring@gmail.com", 
       subject: `New message from ${name}`,
       text: `From: ${email}\n\n${message}`,
     });
