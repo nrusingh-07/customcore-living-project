@@ -1,10 +1,4 @@
-/* ========================================================================== */
-/* 🎨 CustomCore Living - Main Stylesheet (Modern & Structured)                */
-/* ========================================================================== */
 
-/* -------------------------------------------------------------------------- */
-/* 🎯 Root Variables                                                          */
-/* -------------------------------------------------------------------------- */
 :root {
   --blue-1: #0a66d1;
   --blue-2: #1ea1f2;
@@ -20,9 +14,6 @@
   --shadow-soft: 0 8px 24px rgba(14,40,70,0.06);
 }
 
-/* -------------------------------------------------------------------------- */
-/* 🧱 Base                                                                    */
-/* -------------------------------------------------------------------------- */
 * {
   box-sizing: border-box;
 }
@@ -52,10 +43,7 @@ body {
   padding: 0 28px;
 }
 
-/* -------------------------------------------------------------------------- */
-/* 🧭 Header                                                                  */
-/* -------------------------------------------------------------------------- */
-/* --- NAVBAR --- */
+
 .site-header {
   background: linear-gradient(90deg, #0a66d1, #00b4e6);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
@@ -116,7 +104,7 @@ body {
 }
 
 .nav a:hover {
-  color: #ffffff; /* no hover change */
+  color: #ffffff; 
 }
 
 .header-cta {
@@ -130,14 +118,12 @@ body {
 }
 
 .header-cta:hover {
-  background: #0a66d1; /* keep same look */
+  background: #0a66d1; 
   color: #0a66d1;
 }
 
 
-/* -------------------------------------------------------------------------- */
-/* 💡 Hero Section                                                           */
-/* -------------------------------------------------------------------------- */
+
 .hero {
   padding: 70px 0;
   background: transparent;
@@ -220,7 +206,7 @@ body {
   font-weight: 600;
 }
 
-/* Hero Art Card */
+
 .hero-art-card {
   background: linear-gradient(180deg,#fff,#fbfdff);
   border-radius: 18px;
@@ -248,9 +234,7 @@ body {
   box-shadow: 0 4px 12px rgba(10,40,90,0.03);
 }
 
-/* -------------------------------------------------------------------------- */
-/* 🧩 Sections & Utilities                                                   */
-/* -------------------------------------------------------------------------- */
+
 .section {
   padding: 64px 0;
 }
@@ -263,9 +247,7 @@ body {
   color: var(--muted);
 }
 
-/* -------------------------------------------------------------------------- */
-/* ⚙️ Services                                                               */
-/* -------------------------------------------------------------------------- */
+
 .services-grid,
 .projects-grid {
   display: grid;
@@ -297,9 +279,7 @@ body {
   margin: 0;
 }
 
-/* -------------------------------------------------------------------------- */
-/* 🧱 Projects                                                              */
-/* -------------------------------------------------------------------------- */
+
 .project-card {
   background: linear-gradient(180deg,#fff,#fbfdff);
   padding: 22px;
@@ -312,10 +292,7 @@ body {
   margin: 0 0 10px;
 }
 
-/* -------------------------------------------------------------------------- */
-/* 👥 About Section                                                          */
-/* -------------------------------------------------------------------------- */
-/* About Section */
+
 .about {
   background: var(--soft-bg);
   padding: 80px 0;
@@ -352,7 +329,7 @@ body {
   margin-bottom: 32px;
 }
 
-/* Highlight cards */
+
 .about-highlights {
   display: flex;
   flex-direction: column;
@@ -397,7 +374,6 @@ body {
   font-size: 15px;
 }
 
-/* Right panel */
 .about-right {
   background: #fff;
   padding: 30px;
@@ -433,17 +409,6 @@ body {
 }
 
 
-/* Responsive */
-/* @media (max-width: 950px) {
-  .about-wrapper {
-    grid-template-columns: 1fr;
-  }
-} */
-
-
-/* -------------------------------------------------------------------------- */
-/* 💬 Contact Section                                                        */
-/* -------------------------------------------------------------------------- */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 360px;
@@ -493,7 +458,6 @@ body {
   margin-top: 6px;
 }
 
-/* Support Card */
 .support-card {
   background: #fff;
   padding: 22px;
@@ -556,9 +520,6 @@ body {
 
 
 
-/* -------------------------------------------------------------------------- */
-/* 🦶 Footer                                                                 */
-/* -------------------------------------------------------------------------- */
 .site-footer {
   background: #fbfdff;
   padding: 28px;
@@ -566,9 +527,7 @@ body {
   color: var(--muted);
 }
 
-/* -------------------------------------------------------------------------- */
-/* 🖼️ Portfolio                                                             */
-/* -------------------------------------------------------------------------- */
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -590,11 +549,9 @@ body {
   background-position: center;
 }
 
-/* -------------------------------------------------------------------------- */
-/* 📱 RESPONSIVE DESIGN — CustomCore Living                                  */
-/* -------------------------------------------------------------------------- */
 
-/* 💻 Large Tablets / Small Laptops (≤1200px) */
+
+
 @media (max-width: 1200px) {
   .hero-inner {
     grid-template-columns: 1fr 1fr;
@@ -612,9 +569,9 @@ body {
   }
 }
 
-/* 📱 Tablets (≤992px) */
+
 @media (max-width: 992px) {
-  /* Header */
+  
   .site-header-inner {
     flex-direction: column;
     gap: 12px;
@@ -640,7 +597,6 @@ body {
     border-radius: 8px;
   }
 
-  /* Hero */
   .hero-inner {
     grid-template-columns: 1fr;
     text-align: center;
@@ -664,26 +620,25 @@ body {
     flex-wrap: wrap;
   }
 
-  /* Services & Projects */
+
   .services-grid,
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* About */
   .about-wrapper {
     grid-template-columns: 1fr;
   }
 
-  /* Contact */
+
   .contact-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* 📱 Mobile (≤768px) */
+
 @media (max-width: 768px) {
-  /* Header */
+  
   .site-header-inner {
     flex-direction: column;
     align-items: center;
@@ -718,7 +673,7 @@ body {
     font-weight: 600;
   }
 
-  /* Hero */
+
   .hero {
     padding: 50px 16px;
     text-align: center;
@@ -748,14 +703,14 @@ body {
     align-items: center;
   }
 
-  /* Services & Projects */
+
   .services-grid,
   .projects-grid,
   .portfolio-grid {
     grid-template-columns: 1fr;
   }
 
-  /* About */
+
   .section-title {
     font-size: 24px;
   }
@@ -765,7 +720,7 @@ body {
     text-align: center;
   }
 
-  /* Contact */
+
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -774,14 +729,14 @@ body {
     justify-content: center;
   }
 
-  /* Footer */
+
   .site-footer {
     padding: 20px 10px;
     font-size: 14px;
   }
 }
 
-/* 📱 Small Phones (≤480px) */
+
 @media (max-width: 480px) {
   .hero-content h1 {
     font-size: 1.6rem;
@@ -805,16 +760,3 @@ body {
     font-size: 15px;
   }
 }
-
-
-   
-
-
- 
- 
- 
-
-
-
-
-
