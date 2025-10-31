@@ -18,7 +18,7 @@ app.post("/send", async (req, res) => {
   try {
     const response = await resend.emails.send({
       from: "CustomCore <onboarding@resend.dev>", 
-      to: "bigdogring@gmail.com", 
+      to: "customcoreliving@gmail.com", 
       subject: `New message from ${name}`,
       text: `From: ${email}\n\n${message}`,
     });
